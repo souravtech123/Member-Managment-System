@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { LayoutDashboard, Users, UserPlus, LogOut } from 'lucide-react';
+import { LayoutDashboard, Users, UserPlus, LogOut, Calendar, CheckSquare, BarChart } from 'lucide-react';
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -20,6 +20,9 @@ export default function Sidebar() {
     { name: 'Dashboard', href: '/dashboard', icon: <LayoutDashboard size={20} /> },
     { name: 'Members List', href: '/dashboard/members', icon: <Users size={20} /> },
     { name: 'Add Member', href: '/dashboard/members/add', icon: <UserPlus size={20} /> },
+    { name: 'Meetings', href: '/dashboard/meetings', icon: <Calendar size={20} /> },
+    { name: 'Attendance', href: '/dashboard/attendance', icon: <CheckSquare size={20} /> },
+    { name: 'Reports', href: '/dashboard/reports', icon: <BarChart size={20} /> },
   ];
 
   return (
