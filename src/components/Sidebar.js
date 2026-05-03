@@ -29,7 +29,7 @@ export default function Sidebar() {
     <div className="w-64 glass-panel h-[calc(100vh-2rem)] flex flex-col m-4 fixed">
       <div className="p-6">
         <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
-          Xavier Tech Byte
+          Xavier's TechByte Society
         </h1>
         <p className="text-xs text-slate-400 mt-1">Manager Portal</p>
       </div>
