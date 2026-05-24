@@ -106,6 +106,7 @@ export default function MembersList() {
                   <th className="p-4 whitespace-nowrap">Name</th>
                   <th className="p-4 whitespace-nowrap">Team</th>
                   <th className="p-4 whitespace-nowrap">Role</th>
+                  <th className="p-4 whitespace-nowrap">Phone</th>
                   <th className="p-4 whitespace-nowrap">Score</th>
                   <th className="p-4 rounded-tr-xl whitespace-nowrap">Actions</th>
                 </tr>
@@ -113,7 +114,7 @@ export default function MembersList() {
               <tbody className="divide-y divide-white/5">
                 {members.length === 0 ? (
                   <tr>
-                    <td colSpan="6" className="p-8 text-center text-slate-500">No members found matching your criteria.</td>
+                    <td colSpan="7" className="p-8 text-center text-slate-500">No members found matching your criteria.</td>
                   </tr>
                 ) : (
                   members.map((member) => (
@@ -139,6 +140,7 @@ export default function MembersList() {
                         </span>
                       </td>
                       <td className="p-4 text-slate-300">{member.memberType}</td>
+                      <td className="p-4 text-slate-300 font-mono text-sm">{member.phoneNumber || '-'}</td>
                       <td className="p-4 font-semibold text-emerald-400">{member.contributionScore}</td>
                       <td className="p-4 flex gap-2">
                         <Link href={`/dashboard/members/edit/${member._id}`} className="p-2 text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors">

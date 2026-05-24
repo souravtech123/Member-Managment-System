@@ -17,6 +17,7 @@ export default function MemberForm({ initialData = null, memberId = null }) {
     team: initialData?.team || 'Tech',
     memberType: initialData?.memberType || 'General',
     contributionScore: initialData?.contributionScore || 0,
+    phoneNumber: initialData?.phoneNumber || '',
     skills: initialData?.skills || [],
   });
 
@@ -109,6 +110,17 @@ export default function MemberForm({ initialData = null, memberId = null }) {
                 >
                    {ROLES.map(r => <option className="bg-slate-800 text-white" key={r} value={r}>{r}</option>)}
                 </select>
+             </div>
+
+             <div className="space-y-2">
+                <label className="text-sm font-medium text-slate-300">Phone Number</label>
+                <input 
+                  type="tel" 
+                  className="glass-input" 
+                  value={formData.phoneNumber}
+                  onChange={(e) => setFormData({...formData, phoneNumber: e.target.value})}
+                  placeholder="+1 (555) 000-0000"
+                />
              </div>
           </div>
           

@@ -34,6 +34,10 @@ const memberSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  phoneNumber: {
+    type: String,
+    required: false,
+  },
 }, {
   timestamps: { createdAt: 'joinedAt', updatedAt: 'updatedAt' },
 });
